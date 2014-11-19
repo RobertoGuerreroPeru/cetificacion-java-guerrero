@@ -47,10 +47,10 @@ public class Exception {
 			System.out.println("Imprimiendo gatos Sorted:  "+cat.nombre);
 		}
 		
-		
+		sortedUnSortedString();
 	}
 	
-	void sortedUnSortedString(){
+	static void sortedUnSortedString(){
 		System.out.println("Cantidad de segundos: "+new Hora().devolverHora());
 		ArrayList<String> strings = new ArrayList<String>();
 		strings.add("Arnold");
@@ -142,7 +142,7 @@ public class Exception {
 		}
 			
 			
-		for(int n2 : twoDee[2]) 
+		for(int n2 : twoDee[2])
 			System.out.println("Valor n2: "+n2);  // loop thru the 3rd sub-array
 		for(String s : sNums) 
 			System.out.println("Valor s: "+s);// loop thru the array of Strings

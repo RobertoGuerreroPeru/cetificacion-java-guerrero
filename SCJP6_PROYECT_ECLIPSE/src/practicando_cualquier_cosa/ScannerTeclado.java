@@ -6,7 +6,9 @@ package practicando_cualquier_cosa;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Formatter;
+import java.util.InputMismatchException;
 import java.util.Locale;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.Random;
 import java.util.StringTokenizer;
@@ -28,24 +30,47 @@ public class ScannerTeclado {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Double cantidad = 8389393.272;
-		System.out.println("%.2f"+cantidad);
+	try{
+		
+	}catch(NoSuchElementException e){
+		
+	}
+		
+//	}catch(InputMismatchException e){
+//		
+//	}catch(NoSuchElementException ex){
+//		
+//	}
+		
+		int valor;
+		teclado = new Scanner(System.in);
+		valor = teclado.nextInt();
+		if(teclado.hasNextInt())
+			System.out.println("Primer dato: "+teclado.nextInt());
+		if(teclado.hasNext()){
+			System.out.println("Mas datos: "+teclado.nextDouble());
+		}
+		teclado.close();
 		
 		
-		
-		Formatter format = new Formatter();
-		Calendar calendar =  Calendar.getInstance();
-		format.format("%tr %tZ", calendar, calendar);
-		System.out.println("Fecha formateada: "+format);
-		
-		StringBuffer buffer = new StringBuffer();
-		StringBuffer buffer2=new StringBuffer();
-		buffer2.append("HOLA");
-		buffer2.insert(0, "5434");
-		buffer2.insert(0, "097");
-		buffer.append(buffer2);
-		
-		buffer.insert(0, "123");
+//		Double cantidad = 8389393.272;
+//		System.out.println("%.2f"+cantidad);
+//		
+//		
+//		
+//		Formatter format = new Formatter();
+//		Calendar calendar =  Calendar.getInstance();
+//		format.format("%tr %tZ", calendar, calendar);
+//		System.out.println("Fecha formateada: "+format);
+//		
+//		StringBuffer buffer = new StringBuffer();
+//		StringBuffer buffer2=new StringBuffer();
+//		buffer2.append("HOLA");
+//		buffer2.insert(0, "5434");
+//		buffer2.insert(0, "097");
+//		buffer.append(buffer2);
+//		
+//		buffer.insert(0, "123");
 		
 //		String space=" ";
 //		String valor="Hello";
@@ -82,20 +107,22 @@ public class ScannerTeclado {
 //		print("3.2");
 		
 		
-//		System.out.println("Ingrese rango:");
-//		Scanner teclado = new Scanner(System.in);
-//		System.out.println("Primer valor:");
-//		primerValor=teclado.nextInt();
-//		System.out.println("Segundo valor:");
-//		segundoValor=teclado.nextInt();
-//		System.out.println("Cuantos elementos:");
-//		valor = teclado.nextInt();
-//		System.out.println("Valores del rango");
-//		
-//		for (int i = 0; i < valor; i++) {
-//			int v = imprimeAleatoriosRango(primerValor, segundoValor);
-//			System.out.println("Valor impreso: "+v );
-//		}
+		System.out.println("Ingrese rango:");
+		 teclado = new Scanner(System.in);
+		System.out.println("Primer valor:");
+		primerValor=teclado.nextInt();
+		System.out.println("Segundo valor:");
+		segundoValor=teclado.nextInt();
+		System.out.println("Cuantos elementos:");
+		valor = teclado.nextInt();
+		System.out.println("Valores del rango");
+		
+		for (int i = 0; i < valor; i++) {
+			int v = imprimeAleatoriosRango(primerValor, segundoValor);
+			System.out.println("Valor impreso: "+v );
+		}
+		
+		
 		
 	}
 	
